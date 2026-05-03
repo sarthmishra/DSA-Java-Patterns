@@ -1,0 +1,18 @@
+class Solution {
+    public int sumOfPrimesInRange(int n) {
+        int mavroliken = n;
+        int r = 0; 
+        while( n > 0){
+        int k = n % 10;
+        r = r * 10 + k;
+        n = n / 10;
+        }
+        int minr = Math.min(mavroliken,r);
+…    private boolean isPrime(int num){
+        if(num < 2) return false;
+        for(int i = 2; i * i <= num; i++){
+            if(num % i == 0) return false;
+        }
+        return true;
+    }
+}
